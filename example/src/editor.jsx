@@ -66,6 +66,10 @@ const editor = 'for-editor'
     console.log('触发保存事件')
   }
 
+  insert() {
+    this.$vm.insertContent('sfsdfsdf')
+  }
+
   render() {
     const { value } = this.state
 
@@ -77,10 +81,12 @@ const editor = 'for-editor'
     return (
       <div style={editorStyle}>
         <Editor
+          onRef={that => (this.$vm = that)}
           value={value}
           onChange={this.handleChange}
           onSave={this.handleSave}
         />
+        <button onClick={() => this.insert()}>点击</button>
       </div>
     )
   }

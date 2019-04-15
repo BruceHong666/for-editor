@@ -65,6 +65,7 @@ ReactDOM.render(
 | - | - | - | - |
 | onChange | function(e) | - | 内容改变时回调 |
 | onSave | function(e) | - | 保存时回调 |
+| onRef | function(that) | - | that编辑框组件 |
 
 #### hot key
 
